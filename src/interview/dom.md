@@ -40,3 +40,5 @@ If an updated node is found to be of different type than that on the actual DOM,
 
 https://javascript.plainenglish.io/reacts-diffing-algorithm-1a64cfefa4e0
 https://reactjs.org/docs/reconciliation.html
+
+https://blog.bitsrc.io/how-react-renders-a-component-on-screen-da97c56caf71
