@@ -21,3 +21,5 @@ https://www.geeksforgeeks.org/reactjs-virtual-dom/
 https://www.geeksforgeeks.org/when-to-use-usecallback-usememo-and-useeffect/?ref=leftbar-rightbar
 https://www.geeksforgeeks.org/javascript-promises/?ref=lbp
 https://reactjs.org/docs/refs-and-the-dom.html
+
+https://supertokens.com/blog/why-is-redux-state-immutable#:~:text=For%20redux%20to%20work%20correctly,fields%20we%20want%20to%20change.
