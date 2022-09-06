@@ -42,3 +42,24 @@ https://javascript.plainenglish.io/reacts-diffing-algorithm-1a64cfefa4e0
 https://reactjs.org/docs/reconciliation.html
 
 https://blog.bitsrc.io/how-react-renders-a-component-on-screen-da97c56caf71
+
+Virtual DOM: React renders JSX components to the Browser DOM, but keeps a copy of the actual DOM to itself. This copy is the Virtual DOM. We can think of it as the twin brother of the real or Browser DOM. The following actions take place in React:
+
+React stores a copy of Browser DOM which is called Virtual DOM.
+When we make changes or add data, React creates a new Virtual DOM and compares it with the previous one.
+Comparison is done by Diffing Algorithm. The cool fact is all these comparisons take place in the memory and nothing is yet changed in the Browser.
+After comparing, React goes ahead and creates a new Virtual DOM having the changes. It is to note that as many as 200,000 virtual DOM nodes can be produced in a second.
+Then it updates the Browser DOM with the least number of changes possible without rendering the entire DOM again. (Ref: Fig.1) This changes the efficiency of an application tremendously
+
+How does this Virtual DOM compare itself to its previous version?
+
+This is where the Diffing Algorithm comes into play. Some concepts used by this Algorithm are:
+
+Two elements of different types will produce different trees.
+Breadth-First Search (BFS) is applied because if a node is found as changed, it will re-render the entire subtree hence Depth First Approach is not exactly optimal. (Ref: Fig.2)
+When comparing two elements of the same type, keep the underlying node as same and only update changes in attributes or styles.
+React uses optimizations so that a minimal difference can be calculated in O(N) efficiently using this Algorithm.
+
+In simple words, virtual DOM is just a copy of the original DOM kept in the memory and synced with the real DOM by libraries such as ReactDOM. This process is called Reconciliation.
+Virtual DOM has the same properties that of the Real DOM, but it lacks the power to directly change the content of the screen.
+Think of Virtual DOM as the blueprint of a machine, changes made to the blueprint doesn't reflects on the machine itself.
