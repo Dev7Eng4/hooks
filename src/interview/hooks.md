@@ -1,4 +1,22 @@
-# USESTATE
+# UseEffect and UseLayoutEffect
+
+`useEffect`: a hook that helps us to perform mutations, subscriptions, timers, logging, and other side effects after all the components has been created.
+
+- bất đồng bộ
+
+- event (state, props change ...)
+- render component
+- ui update
+- run useEffect
+
+`useLayoutEffect`: đồng bộ
+
+- event (state, props change...)
+- render component
+- run useLayoutEffect
+- ui update
+
+# UseState
 
 `https://reactjs.org/docs/hooks-reference.html#lazy-initial-state`
 
@@ -19,3 +37,12 @@ const [count, setCount] = useState(0)
 - trong setCount react có 1 hàm để xử lý re-render component nên ko thể update state directly
 - before react 18, react will batch (gộp re-render khi update nhiều state) khi handle event
 - from react 18, batching í enabled for all updates by default
+
+# UseMemo and UseCallback
+
+- useMemo: memoized value returned by the passed function (should use when function calculate heavy -> prevent function recalculate)
+- useCallback: memoized callback function
+- the passed function in useCallback can receive parameters but useMemo cann't
+- use with React.memo to prevent child component re-render when props (is reference type) not change
+
+#
