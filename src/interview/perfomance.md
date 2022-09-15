@@ -46,3 +46,8 @@ const images = [
 'Use CDNs like imigx',
 'Remove image metadata with https://www.verexif.com/',
 ];
+
+# Redux
+
+- reselect for single cache
+- re-reselect for multi cache
